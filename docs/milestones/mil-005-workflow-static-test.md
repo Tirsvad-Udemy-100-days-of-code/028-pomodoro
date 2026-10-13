@@ -11,7 +11,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-10-13 | Accepted | AI for S01 | AI as stand-in for S01 | Initial version; Go in RC-017 | pending |
+| 2026-10-13 | Accepted | AI for S01 | AI as stand-in for S01 | Initial version; Go in RC-017 | [faf143b] |
 
 ---
 
@@ -73,3 +73,4 @@ Decide whether the repository's continuous integration workflow is checked by an
 
 [BC-001]: ../business-case.md
 [MIL-004]: ./mil-004-documentation.md
+[faf143b]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/faf143bd8c5ca511c76053c7bcd2c5984a4c9cfc

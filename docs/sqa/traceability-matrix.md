@@ -10,7 +10,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-10-13 | Proposed | AI for S01 | AI as stand-in for S01 | Added the re-review rows after pinning the apt packages (RC-015, RC-016) | [f5f2575] |
-| 2026-10-13 | Proposed | AI for S01 | AI as stand-in for S01 | Added the MIL-005 row (RC-017) | pending |
+| 2026-10-13 | Proposed | AI for S01 | AI as stand-in for S01 | Added the MIL-005 row (RC-017) | [faf143b] |
 
 ---
 
@@ -85,3 +85,4 @@ Tracks backward and forward links between artifact instances so that the Busines
 [f5f2575]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/f5f2575c4a4aa2837c85631624383c8d7dcab2d3
 [MIL-005]: ../milestones/mil-005-workflow-static-test.md
 [RC-017]: ./reviews/rc-017-mil-005.md
+[faf143b]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/faf143bd8c5ca511c76053c7bcd2c5984a4c9cfc

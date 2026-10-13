@@ -12,7 +12,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-10-13 | Deprecated | AI for S01 | AI as stand-in for S01 | Initial version; accepted by AI as stand-in for S01 (no checklist for PP) | [75fa7ed] |
-| 2026-10-13 | Accepted | AI for S01 | AI as stand-in for S01 | Added gateway MIL-005 (workflow static test); accepted by AI as stand-in for S01 (no checklist for PP) | pending |
+| 2026-10-13 | Accepted | AI for S01 | AI as stand-in for S01 | Added gateway MIL-005 (workflow static test); accepted by AI as stand-in for S01 (no checklist for PP) | [faf143b] |
 
 ---
 
@@ -100,3 +100,4 @@ A No-Go on a gateway moves every later date by the rework time; the end date 202
 [MS-002]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/milestone/142
 [MS-003]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/milestone/143
 [MS-004]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/milestone/144
+[faf143b]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/faf143bd8c5ca511c76053c7bcd2c5984a4c9cfc
