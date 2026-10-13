@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-10-13 | Proposed | AI for S01 | AI as stand-in for S01 | Initial version | pending |
+| 2026-10-13 | Proposed | AI for S01 | AI as stand-in for S01 | Initial version | [2566601] |
 
 ---
 
@@ -42,3 +42,4 @@ Go — criterion 24, the one Fail left in RC-015, now passes; the other rows of 
 
 [WF-CI]: ../../../.gitea/workflows/ci.yml
 [QC-WF-001]: ../../../framework/qc/code/qc-workflow.md
+[2566601]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/256660172a1741f5cd3651bcb7d0696f8775f52d

@@ -10,7 +10,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-10-13 | Proposed | AI for S01 | AI as stand-in for S01 | Added the MIL-005 row (RC-017) | [faf143b] |
-| 2026-10-13 | Proposed | AI for S01 | AI as stand-in for S01 | Added the MIL-005 test and the delta review rows (RC-018, RC-019) | pending |
+| 2026-10-13 | Proposed | AI for S01 | AI as stand-in for S01 | Added the MIL-005 test and the delta review rows (RC-018, RC-019) | [2566601] |
 
 ---
 
@@ -91,3 +91,4 @@ Tracks backward and forward links between artifact instances so that the Busines
 [WF-CI]: ../../.gitea/workflows/ci.yml
 [RC-018]: ./reviews/rc-018-mil-005-python.md
 [RC-019]: ./reviews/rc-019-mil-005-workflow-delta.md
+[2566601]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/256660172a1741f5cd3651bcb7d0696f8775f52d
