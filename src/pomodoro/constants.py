@@ -79,3 +79,21 @@ CHECK_MARK: Final[str] = "✔"
 
 CHECK_FONT_SIZE: Final[int] = 20
 """@brief Font size of the check-mark label."""
+
+SECOND_MS: Final[int] = 1000
+"""@brief Milliseconds in one second, the tick of the countdown."""
+
+SECONDS_PER_MINUTE: Final[int] = 60
+"""@brief Seconds in one minute."""
+
+WORK_TITLE: Final[str] = "Work"
+"""@brief Title label text during a work session."""
+
+BREAK_TITLE: Final[str] = "Break"
+"""@brief Title label text during a short or long break."""
+
+SESSIONS_PER_CYCLE: Final[int] = 8
+"""@brief Sessions in one cycle: four work sessions, each followed by a break."""
+
+SESSIONS_PER_PAIR: Final[int] = 2
+"""@brief Sessions in one work and break pair."""
