@@ -1,0 +1,63 @@
+# Project configuration for the Pomodoro timer (Day 28 of 100 Days of Code).
+# Read by pip, setuptools, pytest, ruff and mypy. Decision record: BC-001.
+
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pomodoro"
+version = "1.0.0"
+description = "A Tkinter Pomodoro timer: Day 28 assignment of 100 Days of Code, with tests and documentation."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.13"
+# The program uses only the standard library (Tkinter); see BC-001, objective O4.
+dependencies = []
+classifiers = [
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Utilities",
+    "Environment :: X11 Applications",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.1.1",
+    "pytest-cov==7.1.0",
+    "ruff==0.17.0",
+    "mypy==2.4.0",
+]
+
+[project.scripts]
+pomodoro = "pomodoro.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+pomodoro = ["tomato.png"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "D", "ANN"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["D", "ANN"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "pep257"
+
+[tool.mypy]
+strict = true
+python_version = "3.13"
+files = ["src", "tests"]
+mypy_path = "src"

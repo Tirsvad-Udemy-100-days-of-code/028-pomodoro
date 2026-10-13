@@ -1,0 +1,72 @@
+# Continuous integration: lint, type-check and test the Pomodoro timer.
+#
+# Purpose:   run ruff, mypy (strict) and pytest on every pull request and on main.
+# Triggers:  push to main, pull_request into main, manual run (workflow_dispatch).
+# Inputs:    none. Python version is set once in the PYTHON_VERSION value below.
+# Secrets:   none. The job has read-only access to the repository.
+# Changes:   nothing outside the runner: no release, tag, publish or deploy.
+# Decision:  MIL-001 (docs/milestones/mil-001-project-scaffold.md), BC-001 O4.
+# Host:      written for Gitea Actions; uses only github.* contexts and actions
+#            from actions/, so it also runs on GitHub Actions. Gitea Actions ran
+#            .gitea/workflows/ and ignored .github/workflows/ (QC-WF-001 crit. 2),
+#            so this file lives in .gitea/workflows/ only.
+# Checked:   actionlint 1.7.12 (actionlint-py 1.7.12.25), yamllint 1.38.0 (.yamllint.yml).
+# Observed:  a pull_request run succeeded on Gitea 1.27.3 on 2026-10-13.
+
+---
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "tests/**"
+      - "pyproject.toml"
+      - ".gitea/workflows/ci.yml"
+  workflow_dispatch:
+
+# A newer run of the same branch cancels the older one.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  PYTHON_VERSION: "3.13"
+
+jobs:
+  test:
+    name: Lint, type-check and test
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4.2.2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5.3.0
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Create the virtual environment and install the project
+        run: |
+          python -m venv .venv
+          .venv/bin/python -m pip install --upgrade pip==26.2.1
+          .venv/bin/python -m pip install -e ".[dev]"
+
+      - name: Lint with ruff
+        run: .venv/bin/python -m ruff check src tests
+
+      - name: Check formatting with ruff
+        run: .venv/bin/python -m ruff format --check src tests
+
+      - name: Type-check with mypy
+        run: .venv/bin/python -m mypy
+
+      - name: Run the tests
+        run: .venv/bin/python -m pytest --cov=pomodoro --cov-report=term-missing

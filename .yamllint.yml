@@ -1,0 +1,9 @@
+---
+# yamllint configuration for the repository's YAML files (QC-YML-001 criterion 3).
+# Tool: yamllint 1.38.0. `on:` is a key in workflow files, not a boolean.
+extends: default
+rules:
+  line-length:
+    max: 100
+  truthy:
+    check-keys: false
