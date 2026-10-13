@@ -81,7 +81,7 @@ Press **Start** to begin a 25-minute work session. The timer rolls on by itself:
 python -m pytest
 ```
 
-The tests of the timer rules need no display. The window and controller tests are skipped when Tkinter or a display is not available (on Linux without a display, run `xvfb-run -a python -m pytest`). For a coverage report add `--cov=pomodoro`; for the style and type checks run:
+The tests of the timer rules need no display. `tests/test_workflows.py` is a static test of the files in `.gitea/workflows/`: valid YAML without duplicate keys, the required keys, explicit permissions, a runner and a timeout per job, actions pinned to an exact tag or commit, and no inline script above five lines. The window and controller tests are skipped when Tkinter or a display is not available (on Linux without a display, run `xvfb-run -a python -m pytest`). For a coverage report add `--cov=pomodoro`; for the style and type checks run:
 
 ```bash
 python -m ruff check src tests
@@ -115,7 +115,7 @@ src/pomodoro/             the package
     timer_rules.py          pure rules of the cycle (no Tkinter)
     app.py                  the window: start_timer, count_down, reset_timer
     main.py, __main__.py    entry point (python -m pomodoro)
-tests/                    pytest tests
+tests/                    pytest tests (rules, window, workflow files)
 Doxyfile                  Doxygen configuration
 pyproject.toml            project, pytest, ruff and mypy configuration
 ```
