@@ -4,14 +4,15 @@
 | Key | Value |
 | --- | --- |
 | ID | PP-001 |
-| CrossReference | [BC-001], [SA-001], [MIL-001], [MIL-002], [MIL-003], [MIL-004] |
+| CrossReference | [BC-001], [SA-001], [MIL-001], [MIL-002], [MIL-003], [MIL-004], [MIL-005] |
 | Language | en |
 | Domain | it |
 
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-10-13 | Accepted | AI for S01 | AI as stand-in for S01 | Initial version; accepted by AI as stand-in for S01 (no checklist for PP) | [75fa7ed] |
+| 2026-10-13 | Deprecated | AI for S01 | AI as stand-in for S01 | Initial version; accepted by AI as stand-in for S01 (no checklist for PP) | [75fa7ed] |
+| 2026-10-13 | Accepted | AI for S01 | AI as stand-in for S01 | Added gateway MIL-005 (workflow static test); accepted by AI as stand-in for S01 (no checklist for PP) | [faf143b] |
 
 ---
 
@@ -35,6 +36,7 @@ This plan schedules the four phases (gateways) that deliver the Pomodoro timer o
 | Timer user interface | [MIL-002] | 2026-10-14 to 2026-10-16 | 2026-10-16 | S01 | none | Window with tomato, labels and buttons | [MS-002] |
 | Countdown and cycle | [MIL-003] | 2026-10-16 to 2026-10-18 | 2026-10-18 | S01 | none | Working Pomodoro cycle with tests | [MS-003] |
 | Documentation | [MIL-004] | 2026-10-18 to 2026-10-20 | 2026-10-20 | S01 | none | README, wiki in three languages, description and topics | [MS-004] |
+| Workflow static test | [MIL-005] | 2026-10-13 to 2026-10-14 | 2026-10-14 | S01 | none | Static test of the CI workflow files, pinned dev dependency | |
 
 ```plantuml
 @startgantt
@@ -47,6 +49,8 @@ Project starts 2026-10-13
 [Countdown and cycle Go/No-Go] happens 2026-10-18
 [Documentation] starts 2026-10-18 and ends 2026-10-20
 [Documentation Go/No-Go] happens 2026-10-20
+[Workflow static test] starts 2026-10-13 and ends 2026-10-14
+[Workflow static test Go/No-Go] happens 2026-10-14
 @endgantt
 ```
 
@@ -59,11 +63,12 @@ Project starts 2026-10-13
 | README, wiki in three languages, screenshots | [MIL-004] |
 | Repository description and topics | [MIL-004] |
 | Planning documents and one pull request per milestone | This plan, all gateways |
+| Workflow static test (follow-up of the review of the CI workflow) | [MIL-005] |
 
 ## Dependencies
 
 ```
-baseline-plan → MIL-001 → MIL-002 → MIL-003 → MIL-004
+baseline-plan → MIL-001 → MIL-002 → MIL-003 → MIL-004 → MIL-005
 ```
 
 A No-Go on a gateway moves every later date by the rework time; the end date 2026-10-20 has about one day of slack inside the four windows.
@@ -89,8 +94,10 @@ A No-Go on a gateway moves every later date by the rework time; the end date 202
 [MIL-002]: ./milestones/mil-002-timer-ui.md
 [MIL-003]: ./milestones/mil-003-countdown-cycle.md
 [MIL-004]: ./milestones/mil-004-documentation.md
+[MIL-005]: ./milestones/mil-005-workflow-static-test.md
 [75fa7ed]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/75fa7ed494597311f4cf762cf2e83ac36e22d153
 [MS-001]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/milestone/141
 [MS-002]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/milestone/142
 [MS-003]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/milestone/143
 [MS-004]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/milestone/144
+[faf143b]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/faf143bd8c5ca511c76053c7bcd2c5984a4c9cfc
