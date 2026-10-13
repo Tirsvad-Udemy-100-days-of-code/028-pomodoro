@@ -9,8 +9,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-10-13 | Proposed | AI for S01 | AI as stand-in for S01 | Added the re-review rows of the workflow and YAML (RC-013, RC-014) | [999ae2f] |
 | 2026-10-13 | Proposed | AI for S01 | AI as stand-in for S01 | Added the re-review rows after pinning the apt packages (RC-015, RC-016) | [f5f2575] |
+| 2026-10-13 | Proposed | AI for S01 | AI as stand-in for S01 | Added the MIL-005 row (RC-017) | pending |
 
 ---
 
@@ -39,6 +39,7 @@ Tracks backward and forward links between artifact instances so that the Busines
 | [YML-MIL-003] | YML | - | - | [MIL-003] | - | [RC-014] |
 | [WF-CI-PIN] | WF | - | - | [MIL-003] | - | [RC-015] |
 | [YML-CI-PIN] | YML | - | - | [MIL-003] | - | [RC-016] |
+| [MIL-005] | MIL | en | it | [BC-001], [MIL-004] | - | [RC-017] |
 
 ## Coverage Notes
 
@@ -77,9 +78,10 @@ Tracks backward and forward links between artifact instances so that the Busines
 [YML-MIL-003]: ../../.gitea/workflows/ci.yml
 [RC-013]: ./reviews/rc-013-mil-003-workflow.md
 [RC-014]: ./reviews/rc-014-mil-003-yaml.md
-[999ae2f]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/999ae2fcf2bd0a96a054540ab1eed67e03616a78
 [WF-CI-PIN]: ../../.gitea/workflows/ci.yml
 [YML-CI-PIN]: ../../.gitea/workflows/ci.yml
 [RC-015]: ./reviews/rc-015-ci-apt-pins-workflow.md
 [RC-016]: ./reviews/rc-016-ci-apt-pins-yaml.md
 [f5f2575]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/f5f2575c4a4aa2837c85631624383c8d7dcab2d3
+[MIL-005]: ../milestones/mil-005-workflow-static-test.md
+[RC-017]: ./reviews/rc-017-mil-005.md
