@@ -36,13 +36,18 @@ concurrency:
 permissions:
   contents: read
 
+# Versions are set here, in one place. The apt versions are those of Ubuntu 24.04
+# (noble, noble-updates). When the archive drops one, the install step fails with
+# "Version ... was not found": update the value here, re-run and re-review.
 env:
   PYTHON_VERSION: "3.13"
+  LIBTK_VERSION: "8.6.14-1build1"
+  XVFB_VERSION: "2:21.1.12-1ubuntu1.8"
 
 jobs:
   test:
     name: Lint, type-check and test
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
       - name: Check out the repository
@@ -71,7 +76,8 @@ jobs:
       - name: Install the Tk runtime library and a virtual display
         run: |
           apt-get update
-          apt-get install -y --no-install-recommends libtk8.6 xvfb
+          apt-get install -y --no-install-recommends \
+            "libtk8.6=${LIBTK_VERSION}" "xvfb=${XVFB_VERSION}"
 
       - name: Run the tests under a virtual display
         run: xvfb-run -a .venv/bin/python -m pytest --cov=pomodoro --cov-report=term-missing
