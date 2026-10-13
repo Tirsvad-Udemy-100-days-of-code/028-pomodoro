@@ -11,7 +11,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-10-13 | Accepted | AI for S01 | AI as stand-in for S01 | Initial version; accepted by AI as stand-in for S01 (no checklist for PP) | pending |
+| 2026-10-13 | Accepted | AI for S01 | AI as stand-in for S01 | Initial version; accepted by AI as stand-in for S01 (no checklist for PP) | [75fa7ed] |
 
 ---
 
@@ -89,3 +89,4 @@ A No-Go on a gateway moves every later date by the rework time; the end date 202
 [MIL-002]: ./milestones/mil-002-timer-ui.md
 [MIL-003]: ./milestones/mil-003-countdown-cycle.md
 [MIL-004]: ./milestones/mil-004-documentation.md
+[75fa7ed]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/75fa7ed494597311f4cf762cf2e83ac36e22d153

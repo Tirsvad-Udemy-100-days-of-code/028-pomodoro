@@ -11,7 +11,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-10-13 | Accepted | AI for S01 | AI as stand-in for S01 | Initial version; Go in RC-007 | pending |
+| 2026-10-13 | Accepted | AI for S01 | AI as stand-in for S01 | Initial version; Go in RC-007 | [75fa7ed] |
 
 ---
 
@@ -72,3 +72,4 @@ Decide whether the project is documented well enough for S02 and S03 to run it a
 
 [BC-001]: ../business-case.md
 [MIL-003]: ./mil-003-countdown-cycle.md
+[75fa7ed]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/75fa7ed494597311f4cf762cf2e83ac36e22d153
