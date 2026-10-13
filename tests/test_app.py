@@ -45,7 +45,7 @@ def scheduler() -> FakeScheduler:
 
 @pytest.fixture
 def clocked_app(scheduler: FakeScheduler) -> Iterator["PomodoroApp"]:
-    tk = pytest.importorskip("tkinter", reason=SKIP_REASON)
+    tk = pytest.importorskip("tkinter", reason=SKIP_REASON, exc_type=ImportError)
     from pomodoro.app import PomodoroApp
 
     try:
@@ -69,7 +69,7 @@ def shown_title(app: "PomodoroApp") -> tuple[str, str]:
 
 @pytest.fixture
 def app() -> Iterator["PomodoroApp"]:
-    tk = pytest.importorskip("tkinter", reason=SKIP_REASON)
+    tk = pytest.importorskip("tkinter", reason=SKIP_REASON, exc_type=ImportError)
     from pomodoro.app import PomodoroApp
 
     try:
