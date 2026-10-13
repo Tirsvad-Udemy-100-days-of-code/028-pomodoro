@@ -10,7 +10,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-10-13 | Proposed | AI for S01 | AI as stand-in for S01 | Added the MIL-002 source row (RC-011) | [dec1e6b] |
-| 2026-10-13 | Proposed | AI for S01 | AI as stand-in for S01 | Added the MIL-003 source row (RC-012) | pending |
+| 2026-10-13 | Proposed | AI for S01 | AI as stand-in for S01 | Added the MIL-003 source row (RC-012) | [5b3d012] |
 
 ---
 
@@ -70,3 +70,4 @@ Tracks backward and forward links between artifact instances so that the Busines
 [dec1e6b]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/dec1e6b5b0fa5a56e787755b2e62a78208e28eb5
 [PY-MIL-003]: ../../src/pomodoro/timer_rules.py
 [RC-012]: ./reviews/rc-012-mil-003-python.md
+[5b3d012]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/5b3d01272307e42dee6f55467fd18ad9e83937fa
