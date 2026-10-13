@@ -31,10 +31,10 @@ This plan schedules the four phases (gateways) that deliver the Pomodoro timer o
 
 | Gateway | Document | Window | Decision date | Owner | Stories | Main deliverable | Milestone |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Project scaffold | [MIL-001] | 2026-10-13 to 2026-10-14 | 2026-10-14 | S01 | none | Configuration, layout, constants, Doxyfile, continuous integration | |
-| Timer user interface | [MIL-002] | 2026-10-14 to 2026-10-16 | 2026-10-16 | S01 | none | Window with tomato, labels and buttons | |
-| Countdown and cycle | [MIL-003] | 2026-10-16 to 2026-10-18 | 2026-10-18 | S01 | none | Working Pomodoro cycle with tests | |
-| Documentation | [MIL-004] | 2026-10-18 to 2026-10-20 | 2026-10-20 | S01 | none | README, wiki in three languages, description and topics | |
+| Project scaffold | [MIL-001] | 2026-10-13 to 2026-10-14 | 2026-10-14 | S01 | none | Configuration, layout, constants, Doxyfile, continuous integration | [MS-001] |
+| Timer user interface | [MIL-002] | 2026-10-14 to 2026-10-16 | 2026-10-16 | S01 | none | Window with tomato, labels and buttons | [MS-002] |
+| Countdown and cycle | [MIL-003] | 2026-10-16 to 2026-10-18 | 2026-10-18 | S01 | none | Working Pomodoro cycle with tests | [MS-003] |
+| Documentation | [MIL-004] | 2026-10-18 to 2026-10-20 | 2026-10-20 | S01 | none | README, wiki in three languages, description and topics | [MS-004] |
 
 ```plantuml
 @startgantt
@@ -90,3 +90,7 @@ A No-Go on a gateway moves every later date by the rework time; the end date 202
 [MIL-003]: ./milestones/mil-003-countdown-cycle.md
 [MIL-004]: ./milestones/mil-004-documentation.md
 [75fa7ed]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/75fa7ed494597311f4cf762cf2e83ac36e22d153
+[MS-001]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/milestone/141
+[MS-002]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/milestone/142
+[MS-003]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/milestone/143
+[MS-004]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/milestone/144
