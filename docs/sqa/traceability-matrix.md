@@ -10,7 +10,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-10-13 | Proposed | AI for S01 | AI as stand-in for S01 | Added the MIL-003 source row (RC-012) | [5b3d012] |
-| 2026-10-13 | Proposed | AI for S01 | AI as stand-in for S01 | Added the re-review rows of the workflow and YAML (RC-013, RC-014) | pending |
+| 2026-10-13 | Proposed | AI for S01 | AI as stand-in for S01 | Added the re-review rows of the workflow and YAML (RC-013, RC-014) | [999ae2f] |
 
 ---
 
@@ -76,3 +76,4 @@ Tracks backward and forward links between artifact instances so that the Busines
 [YML-MIL-003]: ../../.gitea/workflows/ci.yml
 [RC-013]: ./reviews/rc-013-mil-003-workflow.md
 [RC-014]: ./reviews/rc-014-mil-003-yaml.md
+[999ae2f]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/999ae2fcf2bd0a96a054540ab1eed67e03616a78
