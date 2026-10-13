@@ -9,8 +9,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-10-13 | Proposed | AI for S01 | AI as stand-in for S01 | Added rows for the MIL-001 source, workflow and YAML (RC-008 to RC-010) | [c799158] |
 | 2026-10-13 | Proposed | AI for S01 | AI as stand-in for S01 | Added the MIL-002 source row (RC-011) | [dec1e6b] |
+| 2026-10-13 | Proposed | AI for S01 | AI as stand-in for S01 | Added the MIL-003 source row (RC-012) | pending |
 
 ---
 
@@ -34,6 +34,7 @@ Tracks backward and forward links between artifact instances so that the Busines
 | [WF-MIL-001] | WF | - | - | [MIL-001] | - | [RC-009] |
 | [YML-MIL-001] | YML | - | - | [MIL-001] | - | [RC-010] |
 | [PY-MIL-002] | PY | - | - | [MIL-002] | - | [RC-011] |
+| [PY-MIL-003] | PY | - | - | [MIL-003] | - | [RC-012] |
 
 ## Coverage Notes
 
@@ -64,7 +65,8 @@ Tracks backward and forward links between artifact instances so that the Busines
 [RC-008]: ./reviews/rc-008-mil-001-python.md
 [RC-009]: ./reviews/rc-009-mil-001-workflow.md
 [RC-010]: ./reviews/rc-010-mil-001-yaml.md
-[c799158]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/c79915819315a2329f4c36a6d6f850c3520b1e0f
 [PY-MIL-002]: ../../src/pomodoro/app.py
 [RC-011]: ./reviews/rc-011-mil-002-python.md
 [dec1e6b]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/dec1e6b5b0fa5a56e787755b2e62a78208e28eb5
+[PY-MIL-003]: ../../src/pomodoro/timer_rules.py
+[RC-012]: ./reviews/rc-012-mil-003-python.md
