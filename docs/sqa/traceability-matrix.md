@@ -10,7 +10,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-10-13 | Proposed | AI for S01 | AI as stand-in for S01 | Initial version | [75fa7ed] |
-| 2026-10-13 | Proposed | AI for S01 | AI as stand-in for S01 | Added rows for the MIL-001 source, workflow and YAML (RC-008 to RC-010) | pending |
+| 2026-10-13 | Proposed | AI for S01 | AI as stand-in for S01 | Added rows for the MIL-001 source, workflow and YAML (RC-008 to RC-010) | [c799158] |
 
 ---
 
@@ -64,3 +64,4 @@ Tracks backward and forward links between artifact instances so that the Busines
 [RC-008]: ./reviews/rc-008-mil-001-python.md
 [RC-009]: ./reviews/rc-009-mil-001-workflow.md
 [RC-010]: ./reviews/rc-010-mil-001-yaml.md
+[c799158]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/c79915819315a2329f4c36a6d6f850c3520b1e0f
