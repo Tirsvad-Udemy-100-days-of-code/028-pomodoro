@@ -116,6 +116,7 @@ src/pomodoro/             the package
     app.py                  the window: start_timer, count_down, reset_timer
     main.py, __main__.py    entry point (python -m pomodoro)
 tests/                    pytest tests (rules, window, workflow files)
+CHANGELOG.md              notable changes per version
 Doxyfile                  Doxygen configuration
 pyproject.toml            project, pytest, ruff and mypy configuration
 ```
