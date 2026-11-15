@@ -11,7 +11,8 @@
 | --- | --- | --- | --- | --- | --- |
 | 2026-10-13 | Deprecated | AI for S01 | AI as stand-in for S01 | Added the MIL-005 row (RC-017) | [faf143b] |
 | 2026-10-13 | Deprecated | AI for S01 | AI as stand-in for S01 | Added the MIL-005 test and the delta review rows (RC-018, RC-019) | [2566601] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the baseline milestone, the wiki row, the new review records, the review of the plan, the concern coverage and the domain education; reviewed in autonomous mode, not independent | [3da20f5] |
+| 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the baseline milestone, the wiki row, the new review records, the review of the plan, the concern coverage and the domain education; reviewed in autonomous mode, not independent | [3da20f5] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the delta review RC-031 of the workflow after the xvfb pin update; reviewed in autonomous mode, not independent | pending |
 
 ---
 
@@ -42,7 +43,7 @@ Tracks backward and forward links between artifact instances so that the Busines
 | [YML-CI-PIN] | YML | - | - | [MIL-003] | - | [RC-016] |
 | [MIL-005] | MIL | en | education | [BC-001], [MIL-004] | [MIL-006] | [RC-028] (Go, re-review after the metadata change), [RC-017] |
 | [PY-MIL-005] | PY | - | - | [MIL-005] | - | [RC-018] |
-| [WF-CI] | WF | - | - | [MIL-003] | [PY-MIL-005] | [RC-019] |
+| [WF-CI] | WF | - | - | [MIL-003] | [PY-MIL-005] | [RC-031] (Go, delta re-review of criteria 17 and 22), [RC-019] |
 | [MIL-006] | MIL | en | education | [BC-001], [PP-001], [MIL-005] | - | [RC-029] (Go) |
 | Wiki | Wiki | en, da, ms | education | [BC-001], [MIL-006] | - | [RC-030] (Go-with-conditions) |
 
@@ -124,3 +125,4 @@ Tracks backward and forward links between artifact instances so that the Busines
 [RC-029]: ./reviews/rc-029-milestone-006.md
 [RC-030]: ./reviews/rc-030-wiki.md
 [3da20f5]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/3da20f512ebb3297bac84d8e9146b55bd1a30098
+[RC-031]: ./reviews/rc-031-ci-xvfb-pin-workflow-delta.md
