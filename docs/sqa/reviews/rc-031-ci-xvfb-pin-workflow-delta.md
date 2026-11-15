@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-16 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | pending |
+| 2026-11-16 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [f528e5f] |
 
 ---
 
@@ -43,3 +43,4 @@ Go — both criteria pass and the other rows of RC-015 and RC-019 are unchanged.
 
 [WF-CI]: ../../../.gitea/workflows/ci.yml
 [QC-WF-001]: ../../../framework/qc/code/qc-workflow.md
+[f528e5f]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/f528e5fdd2d95ccd05fd66c17834113ccc278f91
