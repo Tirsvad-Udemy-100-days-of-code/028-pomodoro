@@ -13,7 +13,7 @@
 | --- | --- | --- | --- | --- | --- |
 | 2026-10-13 | Deprecated | AI for S01 | AI as stand-in for S01 | Initial version; accepted by AI as stand-in for S01 (no checklist for PP) | [75fa7ed] |
 | 2026-10-13 | Deprecated | AI for S01 | AI as stand-in for S01 | Added gateway MIL-005 (workflow static test); accepted by AI as stand-in for S01 (no checklist for PP) | [faf143b] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the baseline gateway MIL-006, its schedule row, scope coverage, dependency, risk and Gantt entries, the No-Go rule and an open issue; gave the planning assumptions their source; linked the git host milestone of MIL-005; replaced the note that no QC checklist exists for the plan; set the domain to education; reviewed in autonomous mode, not independent | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the baseline gateway MIL-006, its schedule row, scope coverage, dependency, risk and Gantt entries, the No-Go rule and an open issue; gave the planning assumptions their source; linked the git host milestone of MIL-005; replaced the note that no QC checklist exists for the plan; set the domain to education; reviewed in autonomous mode, not independent | [3da20f5] |
 
 ---
 
@@ -113,3 +113,4 @@ A No-Go on a gateway moves every later date by the rework time; the end date 202
 [MIL-006]: ./milestones/mil-006-framework-baseline.md
 [MS-005]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/milestone/146
 [MS-006]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/milestone/540
+[3da20f5]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/3da20f512ebb3297bac84d8e9146b55bd1a30098

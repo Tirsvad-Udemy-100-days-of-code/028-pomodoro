@@ -12,7 +12,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-10-13 | Deprecated | AI for S01 | AI as stand-in for S01 | Initial version; Go in RC-003 | [75fa7ed] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Set the domain to education and put the rows in ascending order of the PO term (criterion 8 of QC-DICT-001); the terms and definitions are unchanged; reviewed in autonomous mode, not independent | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Set the domain to education and put the rows in ascending order of the PO term (criterion 8 of QC-DICT-001); the terms and definitions are unchanged; reviewed in autonomous mode, not independent | [3da20f5] |
 
 ---
 
@@ -42,3 +42,4 @@ Maps each Product Owner (PO) term of the Pomodoro timer to its professional IT t
 [SA-001]: ./stakeholder-analysis.md
 [PP-001]: ./project-plan.md
 [75fa7ed]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/75fa7ed494597311f4cf762cf2e83ac36e22d153
+[3da20f5]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/3da20f512ebb3297bac84d8e9146b55bd1a30098

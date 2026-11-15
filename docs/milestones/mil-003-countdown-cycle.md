@@ -12,7 +12,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-10-13 | Deprecated | AI for S01 | AI as stand-in for S01 | Initial version; Go in RC-006 | [75fa7ed] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Set the domain to education (metadata only; content unchanged); reviewed in autonomous mode, not independent | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Set the domain to education (metadata only; content unchanged); reviewed in autonomous mode, not independent | [3da20f5] |
 
 ---
 
@@ -75,3 +75,4 @@ The timer rules module and the wired user interface: `start_timer`, `count_down`
 [BC-001]: ../business-case.md
 [MIL-002]: ./mil-002-timer-ui.md
 [75fa7ed]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/75fa7ed494597311f4cf762cf2e83ac36e22d153
+[3da20f5]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/3da20f512ebb3297bac84d8e9146b55bd1a30098

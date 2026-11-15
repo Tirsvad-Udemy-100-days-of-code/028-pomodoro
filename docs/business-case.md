@@ -12,7 +12,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-10-13 | Deprecated | AI for S01 | AI as stand-in for S01 | Initial version; Go in RC-001 | [75fa7ed] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added objective O7, success criterion 8, a scope item, a risk, an assumption and a constraint exception for the baseline milestone MIL-006; recorded the change of the domain from IT to education; added the link definitions of the cited documents; reviewed in autonomous mode, not independent | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added objective O7, success criterion 8, a scope item, a risk, an assumption and a constraint exception for the baseline milestone MIL-006; recorded the change of the domain from IT to education; added the link definitions of the cited documents; reviewed in autonomous mode, not independent | [3da20f5] |
 
 ---
 
@@ -151,3 +151,4 @@ Proceed — the scope is small, the cost is low and every objective is verifiabl
 [75fa7ed]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/75fa7ed494597311f4cf762cf2e83ac36e22d153
 [PP-001]: ./project-plan.md
 [MIL-006]: ./milestones/mil-006-framework-baseline.md
+[3da20f5]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/3da20f512ebb3297bac84d8e9146b55bd1a30098
