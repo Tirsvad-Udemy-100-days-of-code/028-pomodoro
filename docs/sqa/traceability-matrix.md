@@ -4,13 +4,14 @@
 | Key | Value |
 | --- | --- |
 | ID | TM-001 |
-| CrossReference | [BC-001] |
+| CrossReference | [BC-001], [SA-001], [PP-001], [DICT-001], [MIL-001], [MIL-002], [MIL-003], [MIL-004], [MIL-005], [MIL-006] |
 
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-10-13 | Proposed | AI for S01 | AI as stand-in for S01 | Added the MIL-005 row (RC-017) | [faf143b] |
-| 2026-10-13 | Proposed | AI for S01 | AI as stand-in for S01 | Added the MIL-005 test and the delta review rows (RC-018, RC-019) | [2566601] |
+| 2026-10-13 | Deprecated | AI for S01 | AI as stand-in for S01 | Added the MIL-005 row (RC-017) | [faf143b] |
+| 2026-10-13 | Deprecated | AI for S01 | AI as stand-in for S01 | Added the MIL-005 test and the delta review rows (RC-018, RC-019) | [2566601] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the baseline milestone, the wiki row, the new review records, the review of the plan, the concern coverage and the domain education; reviewed in autonomous mode, not independent | pending |
 
 ---
 
@@ -22,14 +23,14 @@ Tracks backward and forward links between artifact instances so that the Busines
 
 | Artifact Instance | Type | Language | Domain | Upstream (Backward Link) | Downstream (Forward Link) | Last Reviewed (RC-ID) |
 | --- | --- | --- | --- | --- | --- | --- |
-| [BC-001] | BC | en | it | - | [SA-001], [PP-001], [DICT-001], [MIL-001] | [RC-001] |
-| [SA-001] | SA | en | it | [BC-001] | [PP-001], [DICT-001] | [RC-002] |
-| [PP-001] | PP | en | it | [BC-001], [SA-001] | [MIL-001], [MIL-002], [MIL-003], [MIL-004] | - |
-| [DICT-001] | DICT | en | it | [BC-001], [SA-001] | - | [RC-003] |
-| [MIL-001] | MIL | en | it | [BC-001], [PP-001] | [MIL-002] | [RC-004] |
-| [MIL-002] | MIL | en | it | [BC-001], [MIL-001] | [MIL-003] | [RC-005] |
-| [MIL-003] | MIL | en | it | [BC-001], [MIL-002] | [MIL-004] | [RC-006] |
-| [MIL-004] | MIL | en | it | [BC-001], [MIL-003] | - | [RC-007] |
+| [BC-001] | BC | en | education | - | [SA-001], [PP-001], [DICT-001], [MIL-001], [MIL-006] | [RC-020] (Go, re-review of the whole document), [RC-001] |
+| [SA-001] | SA | en | education | [BC-001] | [PP-001], [DICT-001] | [RC-021] (Go, re-review of the whole document), [RC-002] |
+| [PP-001] | PP | en | education | [BC-001], [SA-001] | [MIL-001], [MIL-002], [MIL-003], [MIL-004], [MIL-005], [MIL-006] | [RC-022] (Go, review of the whole document) |
+| [DICT-001] | DICT | en | education | [BC-001], [SA-001] | - | [RC-023] (Go, re-review after the domain change and the new row order), [RC-003] |
+| [MIL-001] | MIL | en | education | [BC-001], [PP-001] | [MIL-002] | [RC-024] (Go, re-review after the metadata change), [RC-004] |
+| [MIL-002] | MIL | en | education | [BC-001], [MIL-001] | [MIL-003] | [RC-025] (Go, re-review after the metadata change), [RC-005] |
+| [MIL-003] | MIL | en | education | [BC-001], [MIL-002] | [MIL-004] | [RC-026] (Go, re-review after the metadata change), [RC-006] |
+| [MIL-004] | MIL | en | education | [BC-001], [MIL-003] | - | [RC-027] (Go, re-review after the metadata change), [RC-007] |
 | [PY-MIL-001] | PY | - | - | [MIL-001] | - | [RC-008] |
 | [WF-MIL-001] | WF | - | - | [MIL-001] | - | [RC-009] |
 | [YML-MIL-001] | YML | - | - | [MIL-001] | - | [RC-010] |
@@ -39,15 +40,33 @@ Tracks backward and forward links between artifact instances so that the Busines
 | [YML-MIL-003] | YML | - | - | [MIL-003] | - | [RC-014] |
 | [WF-CI-PIN] | WF | - | - | [MIL-003] | - | [RC-015] |
 | [YML-CI-PIN] | YML | - | - | [MIL-003] | - | [RC-016] |
-| [MIL-005] | MIL | en | it | [BC-001], [MIL-004] | - | [RC-017] |
+| [MIL-005] | MIL | en | education | [BC-001], [MIL-004] | [MIL-006] | [RC-028] (Go, re-review after the metadata change), [RC-017] |
 | [PY-MIL-005] | PY | - | - | [MIL-005] | - | [RC-018] |
 | [WF-CI] | WF | - | - | [MIL-003] | [PY-MIL-005] | [RC-019] |
+| [MIL-006] | MIL | en | education | [BC-001], [PP-001], [MIL-005] | - | [RC-029] (Go) |
+| Wiki | Wiki | en, da, ms | education | [BC-001], [MIL-006] | - | [RC-030] (Go-with-conditions) |
+
+## Concern Coverage
+
+| Concern (CN-ID) | Views that answer it | Decisions (ADR) | Quality check (TP) | Status |
+| --- | --- | --- | --- | --- |
+| CN-001 | [MIL-002], [MIL-003] | - | - | Covered |
+| CN-002 | [MIL-001], [MIL-003], [MIL-005], [MIL-006] | - | - | Covered |
+| CN-003 | [MIL-002], [MIL-003] | - | - | Covered |
+| CN-004 | [MIL-004] | - | - | Covered |
+| CN-005 | [MIL-004] | - | - | Covered |
+| CN-006 | [MIL-001] | - | - | Covered |
+| CN-007 | [MIL-006] | - | - | Covered |
 
 ## Coverage Notes
 
 - Types with no instance yet: KPI, BMC, BPMN, UCD, US, UC, DM, SSD, OC, SD, DCD, ERD, GOV, ADR. They are not used by this single-screen exercise (see the Open Issues of [PP-001]).
-- `-` in Upstream means foundational; in Downstream it means nothing is built on it yet; in Last Reviewed it means no `RC-*` exists. [PP-001] has no QC checklist in the framework, so it has no review record.
+- `-` in Upstream means foundational; in Downstream it means nothing is built on it yet; in Last Reviewed it means no `RC-*` exists.
 - Source code (`PY`) rows are added when a milestone's code is reviewed against `QC-PY-001`.
+- The domain of every artifact is `education` since [MIL-006]; the earlier review records state the former domain `it` as it was at the time.
+- [PP-001] is reviewed against `QC-PP-001`, which the framework added after the plan was written ([RC-022]).
+- The source code and the workflow are reviewed in the records RC-008 to RC-019 and not again in [MIL-006], which changes no source file.
+- The review records and this matrix have no QC checklist for themselves and are not reviewed.
 
 ---
 
@@ -92,3 +111,15 @@ Tracks backward and forward links between artifact instances so that the Busines
 [RC-018]: ./reviews/rc-018-mil-005-python.md
 [RC-019]: ./reviews/rc-019-mil-005-workflow-delta.md
 [2566601]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/256660172a1741f5cd3651bcb7d0696f8775f52d
+[MIL-006]: ../milestones/mil-006-framework-baseline.md
+[RC-020]: ./reviews/rc-020-business-case-baseline.md
+[RC-021]: ./reviews/rc-021-stakeholder-analysis-baseline.md
+[RC-022]: ./reviews/rc-022-project-plan-baseline.md
+[RC-023]: ./reviews/rc-023-dictionary-baseline.md
+[RC-024]: ./reviews/rc-024-milestone-001-baseline.md
+[RC-025]: ./reviews/rc-025-milestone-002-baseline.md
+[RC-026]: ./reviews/rc-026-milestone-003-baseline.md
+[RC-027]: ./reviews/rc-027-milestone-004-baseline.md
+[RC-028]: ./reviews/rc-028-milestone-005-baseline.md
+[RC-029]: ./reviews/rc-029-milestone-006.md
+[RC-030]: ./reviews/rc-030-wiki.md

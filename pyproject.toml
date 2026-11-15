@@ -2,7 +2,7 @@
 # Read by pip, setuptools, pytest, ruff and mypy. Decision record: BC-001.
 
 [build-system]
-requires = ["setuptools>=70"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -10,7 +10,9 @@ name = "pomodoro"
 version = "1.0.0"
 description = "A Tkinter Pomodoro timer: Day 28 assignment of 100 Days of Code, with tests and documentation."
 readme = "README.md"
-license = { file = "LICENSE" }
+license = "AGPL-3.0-only"
+license-files = ["LICENSE"]
+authors = [{ name = "Jens Tirsvad Nielsen" }]
 requires-python = ">=3.13"
 # The program uses only the standard library (Tkinter); see BC-001, objective O4.
 dependencies = []
@@ -19,6 +21,11 @@ classifiers = [
     "Topic :: Utilities",
     "Environment :: X11 Applications",
 ]
+
+[project.urls]
+Repository = "https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro"
+Documentation = "https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/wiki"
+"Issue tracker" = "https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/issues"
 
 [project.optional-dependencies]
 dev = [

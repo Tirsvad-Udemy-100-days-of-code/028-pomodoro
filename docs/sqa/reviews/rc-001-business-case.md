@@ -66,3 +66,4 @@ Go — every Mandatory criterion of QC-BC-001 and of QC-LANG-001 passes. Not ind
 [QC-BC-001]: ../../../framework/qc/artifacts/qc-business-case.md
 [QC-LANG-001]: ../../../framework/qc/artifacts/qc-language-domain.md
 [75fa7ed]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/75fa7ed494597311f4cf762cf2e83ac36e22d153
+[SA-001]: ../../stakeholder-analysis.md

@@ -4,25 +4,28 @@
 | Key | Value |
 | --- | --- |
 | ID | PP-001 |
-| CrossReference | [BC-001], [SA-001], [MIL-001], [MIL-002], [MIL-003], [MIL-004], [MIL-005] |
+| CrossReference | [BC-001], [SA-001], [MIL-001], [MIL-002], [MIL-003], [MIL-004], [MIL-005], [MIL-006] |
 | Language | en |
-| Domain | it |
+| Domain | education |
 
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-10-13 | Deprecated | AI for S01 | AI as stand-in for S01 | Initial version; accepted by AI as stand-in for S01 (no checklist for PP) | [75fa7ed] |
-| 2026-10-13 | Accepted | AI for S01 | AI as stand-in for S01 | Added gateway MIL-005 (workflow static test); accepted by AI as stand-in for S01 (no checklist for PP) | [faf143b] |
+| 2026-10-13 | Deprecated | AI for S01 | AI as stand-in for S01 | Added gateway MIL-005 (workflow static test); accepted by AI as stand-in for S01 (no checklist for PP) | [faf143b] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the baseline gateway MIL-006, its schedule row, scope coverage, dependency, risk and Gantt entries, the No-Go rule and an open issue; gave the planning assumptions their source; linked the git host milestone of MIL-005; replaced the note that no QC checklist exists for the plan; set the domain to education; reviewed in autonomous mode, not independent | pending |
 
 ---
 
 ## Purpose
 
-This plan schedules the four phases (gateways) that deliver the Pomodoro timer of [BC-001] inside its constraint of one week, from 2026-10-13 to 2026-10-20. Each phase is one pull request and one Milestone on the git host; its tasks are the Issues the pull request closes.
+This plan schedules the four phases (gateways) that deliver the Pomodoro timer of [BC-001] inside its constraint of one week, from 2026-10-13 to 2026-10-20. Each phase is one pull request and one Milestone on the git host; its tasks are the Issues the pull request closes. Two gateways were added after the first plan: [MIL-005] (workflow static test) and, on 2026-11-16, [MIL-006] to bring the finished project to the baseline of the framework; [MIL-006] runs from 2026-11-16 to 2026-11-23.
 
 ## Planning Assumptions
 
 - The plan starts 2026-10-13 and ends by 2026-10-20, per the Business Case constraint.
+- The baseline gateway [MIL-006] starts 2026-11-16 and ends by 2026-11-23, one week (source: [BC-001], Assumptions). It is the only gateway outside the window of the first five, because of the agreed minimum quality baseline of the framework.
+- For [MIL-006] S01 has authorised the assistant to commit, push, open the pull request and merge it, and the review is done by an AI stand-in for S01 (source: [BC-001], Constraints; [SA-001], Conflicting Interests and Mitigations).
 - Phases are short (about two days) because the application is one screen; S01 reviews per pull request, as [SA-001] sets.
 - Each phase is a branch and a pull request: `mil-001-project-scaffold`, `mil-002-timer-ui`, `mil-003-countdown-cycle`, `mil-004-documentation`.
 - The baseline documents (this plan, [BC-001], [SA-001] and the four milestones) are delivered by their own pull request, `baseline-plan`, before any code.
@@ -36,7 +39,8 @@ This plan schedules the four phases (gateways) that deliver the Pomodoro timer o
 | Timer user interface | [MIL-002] | 2026-10-14 to 2026-10-16 | 2026-10-16 | S01 | none | Window with tomato, labels and buttons | [MS-002] |
 | Countdown and cycle | [MIL-003] | 2026-10-16 to 2026-10-18 | 2026-10-18 | S01 | none | Working Pomodoro cycle with tests | [MS-003] |
 | Documentation | [MIL-004] | 2026-10-18 to 2026-10-20 | 2026-10-20 | S01 | none | README, wiki in three languages, description and topics | [MS-004] |
-| Workflow static test | [MIL-005] | 2026-10-13 to 2026-10-14 | 2026-10-14 | S01 | none | Static test of the CI workflow files, pinned dev dependency | |
+| Workflow static test | [MIL-005] | 2026-10-13 to 2026-10-14 | 2026-10-14 | S01 | none | Static test of the CI workflow files, pinned dev dependency | [MS-005] |
+| Framework baseline | [MIL-006] | 2026-11-16 to 2026-11-23 | 2026-11-23 | S01 | none | The framework release, the wiki in the framework's shape, the README in the framework template, the licence metadata, the traceability matrix and the review records | [MS-006] |
 
 ```plantuml
 @startgantt
@@ -50,7 +54,9 @@ Project starts 2026-10-13
 [Documentation] starts 2026-10-18 and ends 2026-10-20
 [Documentation Go/No-Go] happens 2026-10-20
 [Workflow static test] starts 2026-10-13 and ends 2026-10-14
+[Framework baseline] starts 2026-11-16 and ends 2026-11-23
 [Workflow static test Go/No-Go] happens 2026-10-14
+[Framework baseline Go/No-Go] happens 2026-11-23
 @endgantt
 ```
 
@@ -64,14 +70,15 @@ Project starts 2026-10-13
 | Repository description and topics | [MIL-004] |
 | Planning documents and one pull request per milestone | This plan, all gateways |
 | Workflow static test (follow-up of the review of the CI workflow) | [MIL-005] |
+| The baseline: framework release, wiki shape, README template, licence metadata, traceability matrix, review records | MIL-006 |
 
 ## Dependencies
 
 ```
-baseline-plan → MIL-001 → MIL-002 → MIL-003 → MIL-004 → MIL-005
+baseline-plan → MIL-001 → MIL-002 → MIL-003 → MIL-004 → MIL-005 → MIL-006
 ```
 
-A No-Go on a gateway moves every later date by the rework time; the end date 2026-10-20 has about one day of slack inside the four windows.
+A No-Go on a gateway moves every later date by the rework time; the end date 2026-10-20 has about one day of slack inside the four windows. A No-Go on [MIL-006] leaves the program and the earlier gateways as they are; S01 decides the new date.
 
 ## Plan Risks
 
@@ -80,11 +87,13 @@ A No-Go on a gateway moves every later date by the rework time; the end date 202
 | The wiki repository of the git host is not enabled or not writable with the token | Wiki cannot be published in [MIL-004] | Keep the wiki pages as files in the repository and report it in the run summary |
 | Review stand-in cannot satisfy the language criteria of a person | A gateway stays on Go-with-conditions | Record it, list it in the run summary and let S01 confirm |
 | Runner for continuous integration is missing on the git host | Continuous integration stays unverified | Verify the workflow file statically and report that no run was observed |
+| A continuous integration (CI) check fails on the pull request of [MIL-006] | The merge is delayed past 2026-11-23 | The failure is fixed on the same branch and the checks run again; after three failed rounds on one cause the work stops and S01 decides (trace: success criterion 8 of [BC-001]) |
 
 ## Open Issues
 
 - S01 confirms in the run summary the stand-in decisions, the choice not to write use cases, and the language criteria 3, 5 and 9 of `QC-LANG-001`.
-- `PP` has no QC checklist yet (framework open item); the plan is validated against the Go/No-Go criteria of its milestones.
+- `PP` had no QC checklist when this plan was written; the framework now has `QC-PP-001` and this plan is reviewed against it in [MIL-006].
+- Framework baseline (closed in [MIL-006]): the wiki pages already were in `docs/wiki/`; the baseline renamed the translations to the framework's file names (`Home-da.md`), gave every page the language line in the framework's form, a sidebar in the framework's shape and a Project Documents page. Every document with a `Domain` row now has the domain `education`.
 
 ---
 
@@ -101,3 +110,6 @@ A No-Go on a gateway moves every later date by the rework time; the end date 202
 [MS-003]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/milestone/143
 [MS-004]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/milestone/144
 [faf143b]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/faf143bd8c5ca511c76053c7bcd2c5984a4c9cfc
+[MIL-006]: ./milestones/mil-006-framework-baseline.md
+[MS-005]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/milestone/146
+[MS-006]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/milestone/540

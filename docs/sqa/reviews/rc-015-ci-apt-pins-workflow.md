@@ -66,3 +66,4 @@ Go — every Mandatory criterion of QC-WF-001 passes or is not applicable with t
 [WF-MIL-001]: ../../../.gitea/workflows/ci.yml
 [QC-WF-001]: ../../../framework/qc/code/qc-workflow.md
 [f5f2575]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/f5f2575c4a4aa2837c85631624383c8d7dcab2d3
+[QC-YML-001]: ../../../framework/qc/code/qc-yaml.md

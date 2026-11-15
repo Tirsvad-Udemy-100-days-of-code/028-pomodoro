@@ -1,6 +1,6 @@
-# Brug
+[English](Usage) · **Dansk** · [Bahasa Melayu](Usage-ms)
 
-[English](Home) | Dansk | [Bahasa Melayu](Home.ms)
+# Brug
 
 > Denne side ligger i repositoryet under `docs/wiki/`. Den engelske side er kilden; den danske og den malajiske side er oversættelser.
 
