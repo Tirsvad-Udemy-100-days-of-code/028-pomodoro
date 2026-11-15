@@ -42,7 +42,7 @@ permissions:
 env:
   PYTHON_VERSION: "3.13"
   LIBTK_VERSION: "8.6.14-1build1"
-  XVFB_VERSION: "2:21.1.12-1ubuntu1.8"
+  XVFB_VERSION: "2:21.1.12-1ubuntu1.9"
 
 jobs:
   test:
