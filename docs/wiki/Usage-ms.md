@@ -1,6 +1,6 @@
-# Penggunaan
+[English](Usage) · [Dansk](Usage-da) · **Bahasa Melayu**
 
-[English](Home) | [Dansk](Home.da) | Bahasa Melayu
+# Penggunaan
 
 > Halaman ini disimpan dalam repositori di bawah `docs/wiki/`. Halaman Inggeris ialah sumber; halaman Denmark dan Bahasa Melayu ialah terjemahan.
 

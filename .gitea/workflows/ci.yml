@@ -11,7 +11,7 @@
 #            .gitea/workflows/ and ignored .github/workflows/ (QC-WF-001 crit. 2),
 #            so this file lives in .gitea/workflows/ only.
 # Checked:   actionlint 1.7.12 (actionlint-py 1.7.12.25), yamllint 1.38.0 (.yamllint.yml).
-# Observed:  a pull_request run succeeded on Gitea 1.27.3 on 2026-10-13.
+# Observed:  a pull_request run succeeded on Gitea 1.27.3 on 2026-10-13 and again on 2026-11-16 (xvfb pin updated).
 
 ---
 name: CI
@@ -42,7 +42,7 @@ permissions:
 env:
   PYTHON_VERSION: "3.13"
   LIBTK_VERSION: "8.6.14-1build1"
-  XVFB_VERSION: "2:21.1.12-1ubuntu1.8"
+  XVFB_VERSION: "2:21.1.12-1ubuntu1.9"
 
 jobs:
   test:

@@ -1,6 +1,6 @@
-# Installation
+[English](Install) · **Dansk** · [Bahasa Melayu](Install-ms)
 
-[English](Home) | Dansk | [Bahasa Melayu](Home.ms)
+# Installation
 
 > Denne side ligger i repositoryet under `docs/wiki/`. Den engelske side er kilden; den danske og den malajiske side er oversættelser.
 
@@ -52,4 +52,4 @@ python -m pip install -e ".[dev]"
 
 Kør `deactivate` for at forlade det virtuelle miljø.
 
-Næste: [Brug](Usage.da).
+Næste: [Brug](Usage-da).

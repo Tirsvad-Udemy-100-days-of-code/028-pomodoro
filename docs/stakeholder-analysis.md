@@ -4,14 +4,15 @@
 | Key | Value |
 | --- | --- |
 | ID | SA-001 |
-| CrossReference | [BC-001] |
+| CrossReference | [BC-001], [MIL-006] |
 | Language | en |
-| Domain | it |
+| Domain | education |
 
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-10-13 | Accepted | AI for S01 | AI as stand-in for S01 | Initial version; Go in RC-002 | [75fa7ed] |
+| 2026-10-13 | Deprecated | AI for S01 | AI as stand-in for S01 | Initial version; Go in RC-002 | [75fa7ed] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added concern IDs CN-001 to CN-006 (QC-SA-001 criterion 9), the baseline concern CN-007, the baseline milestone in the communication table and a conflict about the stand-in reviewer; spelled out FURPS+; set the domain to education; reviewed in autonomous mode, not independent | [3da20f5] |
 
 ---
 
@@ -35,14 +36,17 @@ This analysis identifies who has influence over, or interest in, the Pomodoro Ti
 
 ## Primary Concerns and FURPS+ Mapping
 
-| ID | Concern | FURPS+ attribute |
-| --- | --- | --- |
-| S01 | The timer behaves as the lectures describe | Functionality |
-| S01 | Rules are tested and the process is reviewed | Reliability |
-| S02 | Code is readable and keeps the assignment's function names | Supportability (+ Design constraint) |
-| S02 | Instructions to run the program and the tests on their platform | Usability |
-| S03 | The repository explains itself: description, topics, README | Usability |
-| S03 | No runtime dependencies to install | Implementation constraint (+ Supportability) |
+FURPS+ stands for Functionality, Usability, Reliability, Performance and Supportability, plus design, implementation, interface and physical constraints.
+
+| Concern ID | Stakeholder | Concern | FURPS+ attribute |
+| --- | --- | --- | --- |
+| CN-001 | S01 | The timer behaves as the lectures describe | Functionality |
+| CN-002 | S01 | Rules are tested and the process is reviewed | Reliability |
+| CN-003 | S02 | Code is readable and keeps the assignment's function names | Supportability (+ Design constraint) |
+| CN-004 | S02 | Instructions to run the program and the tests on their platform | Usability |
+| CN-005 | S03 | The repository explains itself: description, topics, README | Usability |
+| CN-006 | S03 | No runtime dependencies to install | Implementation constraint (+ Supportability) |
+| CN-007 | S01 | The project follows the common baseline of the framework, with the wiki in the framework's shape | Supportability |
 
 ## Communication Requirements
 
@@ -51,6 +55,7 @@ This analysis identifies who has influence over, or interest in, the Pomodoro Ti
 | S01 | Chat and pull request review | Per milestone | Pull request with closed issues and review records | Every milestone |
 | S02 | README and wiki | Once, then on change | Run and test instructions in three languages | Documentation milestone |
 | S03 | Repository page | Once, then on change | Description, topics, README with screenshot | Documentation milestone |
+| S01 | Pull request on the git host and end-of-run summary in chat | Once, for the baseline milestone | Documents, wiki and review records to read, and the stand-in decisions | [MIL-006] |
 
 ## Conflicting Interests and Mitigations
 
@@ -58,6 +63,7 @@ This analysis identifies who has influence over, or interest in, the Pomodoro Ti
 | --- | --- | --- |
 | S02 wants the assignment's single-script shape and names; S01 wants tested rules separated from the user interface | S01, S02 | Keep `start_timer`, `reset_timer` and `count_down` as functions of the user-interface module, and put only the pure rules in a separate module |
 | S03 wants no dependencies; testing needs pytest | S03, S01 | pytest is a development dependency only; the runtime dependency list is empty |
+| The documents of the baseline milestone are accepted by an AI stand-in for S01, so that review is not independent | S01 | S01 authorised the stand-in for the baseline milestone only; every review record says `Mode: autonomous, not independent`, and the end-of-run summary lists each stand-in decision so that S01 can challenge it |
 
 ## Traceability Analysis
 
@@ -65,12 +71,13 @@ This analysis identifies who has influence over, or interest in, the Pomodoro Ti
 
 | Stakeholder | Concern | Business Case objective |
 | --- | --- | --- |
-| S01 | Timer behaves as in the lectures | O1 in [BC-001] |
-| S01 | Rules are tested | O3 in [BC-001] |
-| S02 | Assignment's function names and constants | O2 in [BC-001] |
-| S02 | Instructions to run, in their language | O4 and O5 in [BC-001] |
-| S03 | Description, topics, README | O5 and O6 in [BC-001] |
-| S03 | No runtime dependencies | O4 in [BC-001] |
+| S01 | Timer behaves as in the lectures (CN-001) | O1 in [BC-001] |
+| S01 | Rules are tested and the process is reviewed (CN-002) | O3 in [BC-001] |
+| S02 | Assignment's function names and constants (CN-003) | O2 in [BC-001] |
+| S02 | Instructions to run, in their language (CN-004) | O4 and O5 in [BC-001] |
+| S03 | Description, topics, README (CN-005) | O5 and O6 in [BC-001] |
+| S03 | No runtime dependencies (CN-006) | O4 in [BC-001] |
+| S01 | The project follows the common baseline of the framework (CN-007) | O7 in [BC-001] |
 
 ## Sign-Off
 
@@ -78,7 +85,11 @@ This analysis identifies who has influence over, or interest in, the Pomodoro Ti
 | --- | --- | --- |
 | Product Owner | S01 | Pending review |
 
+The changes of the baseline milestone were reviewed by the AI stand-in for S01 in the review record of this document (Go), autonomous, not independent; the Sign-Off row stays Pending review until S01 confirms.
+
 ---
 
 [BC-001]: ./business-case.md
 [75fa7ed]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/75fa7ed494597311f4cf762cf2e83ac36e22d153
+[MIL-006]: ./milestones/mil-006-framework-baseline.md
+[3da20f5]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/3da20f512ebb3297bac84d8e9146b55bd1a30098

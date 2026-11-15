@@ -1,6 +1,6 @@
-# Pemasangan
+[English](Install) · [Dansk](Install-da) · **Bahasa Melayu**
 
-[English](Home) | [Dansk](Home.da) | Bahasa Melayu
+# Pemasangan
 
 > Halaman ini disimpan dalam repositori di bawah `docs/wiki/`. Halaman Inggeris ialah sumber; halaman Denmark dan Bahasa Melayu ialah terjemahan.
 
@@ -52,4 +52,4 @@ python -m pip install -e ".[dev]"
 
 Jalankan `deactivate` untuk keluar daripada persekitaran maya.
 
-Seterusnya: [Penggunaan](Usage.ms).
+Seterusnya: [Penggunaan](Usage-ms).

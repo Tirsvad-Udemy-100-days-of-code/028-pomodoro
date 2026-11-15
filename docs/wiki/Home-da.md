@@ -1,6 +1,6 @@
-# Pomodoro Timer
+[English](Home) · **Dansk** · [Bahasa Melayu](Home-ms)
 
-[English](Home) | Dansk | [Bahasa Melayu](Home.ms)
+# Pomodoro Timer
 
 > Denne side ligger i repositoryet under `docs/wiki/`. Den engelske side er kilden; den danske og den malajiske side er oversættelser.
 
@@ -20,7 +20,8 @@ Timeren følger Francesco Cirillos Pomodoro-teknik: arbejd i fokuserede sessione
 
 ## Videre herfra
 
-- [Installation](Install.da): opsæt Python, det virtuelle miljø og projektet på Windows, Linux eller macOS
-- [Brug](Usage.da): kør timeren, testene og kildedokumentationen
+- [Installation](Install-da): opsæt Python, det virtuelle miljø og projektet på Windows, Linux eller macOS
+- [Brug](Usage-da): kør timeren, testene og kildedokumentationen
+- [Projektdokumenter](Project-Documents-da): projektets plan, milepæle og gennemgangsdokumenter
 
 Kildekode: [https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro)

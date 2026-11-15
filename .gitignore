@@ -31,6 +31,7 @@ docs/doxygen/
 # Personal tooling secrets: never commit
 .env
 .env.*
+!.env.example
 
 # Editors and operating systems
 .idea/
@@ -38,3 +39,6 @@ docs/doxygen/
 *.swp
 .DS_Store
 Thumbs.db
+
+# AI prompt logs (the repository is public)
+/docs/ai-prompts/

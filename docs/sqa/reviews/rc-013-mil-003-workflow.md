@@ -67,3 +67,4 @@ Go-with-conditions — every Mandatory criterion passes except 17 (apt packages 
 [WF-MIL-001]: ../../../.gitea/workflows/ci.yml
 [QC-WF-001]: ../../../framework/qc/code/qc-workflow.md
 [999ae2f]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/999ae2fcf2bd0a96a054540ab1eed67e03616a78
+[QC-YML-001]: ../../../framework/qc/code/qc-yaml.md

@@ -1,6 +1,6 @@
-# Pomodoro Timer
+[English](Home) · [Dansk](Home-da) · **Bahasa Melayu**
 
-[English](Home) | [Dansk](Home.da) | Bahasa Melayu
+# Pomodoro Timer
 
 > Halaman ini disimpan dalam repositori di bawah `docs/wiki/`. Halaman Inggeris ialah sumber; halaman Denmark dan Bahasa Melayu ialah terjemahan.
 
@@ -20,7 +20,8 @@ Pemasa ini mengikut teknik Pomodoro oleh Francesco Cirillo: bekerja dalam sesi y
 
 ## Seterusnya
 
-- [Pemasangan](Install.ms): sediakan Python, persekitaran maya dan projek pada Windows, Linux atau macOS
-- [Penggunaan](Usage.ms): jalankan pemasa, ujian dan dokumentasi kod sumber
+- [Pemasangan](Install-ms): sediakan Python, persekitaran maya dan projek pada Windows, Linux atau macOS
+- [Penggunaan](Usage-ms): jalankan pemasa, ujian dan dokumentasi kod sumber
+- [Dokumen Projek](Project-Documents-ms): pelan, pencapaian dan rekod semakan projek
 
 Kod sumber: [https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro](https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro)

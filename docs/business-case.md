@@ -4,20 +4,21 @@
 | Key | Value |
 | --- | --- |
 | ID | BC-001 |
-| CrossReference | [SA-001] |
+| CrossReference | [SA-001], [PP-001], [MIL-006] |
 | Language | en |
-| Domain | it |
+| Domain | education |
 
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-10-13 | Accepted | AI for S01 | AI as stand-in for S01 | Initial version; Go in RC-001 | [75fa7ed] |
+| 2026-10-13 | Deprecated | AI for S01 | AI as stand-in for S01 | Initial version; Go in RC-001 | [75fa7ed] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added objective O7, success criterion 8, a scope item, a risk, an assumption and a constraint exception for the baseline milestone MIL-006; recorded the change of the domain from IT to education; added the link definitions of the cited documents; reviewed in autonomous mode, not independent | [3da20f5] |
 
 ---
 
 ## Executive Summary
 
-The project builds a desktop Pomodoro timer in Python with Tkinter, as the Day 28 assignment of the Udemy course "100 Days of Code: The Complete Python Pro Bootcamp". The timer alternates 25 minutes of work with 5-minute breaks and a longer break after four work sessions, shows a tomato image, and counts completed work sessions with check marks. The result is published as a readable, runnable repository with instructions, tests, source documentation and a three-language wiki, so that other course participants and visitors can learn from it. The project proceeds.
+The project builds a desktop Pomodoro timer in Python with Tkinter, as the Day 28 assignment of the Udemy course "100 Days of Code: The Complete Python Pro Bootcamp". The timer alternates 25 minutes of work with 5-minute breaks and a longer break after four work sessions, shows a tomato image, and counts completed work sessions with check marks. The result is published as a readable, runnable repository with instructions, tests, source documentation and a three-language wiki, so that other course participants and visitors can learn from it. A later milestone, [MIL-006], brings the finished project to the baseline of the framework. The project proceeds.
 
 ## Methodological and Standards Foundation
 
@@ -42,6 +43,7 @@ A complete, tested and documented solution gives the Product Owner a reference r
 4. **O4** Make the project reproducible: Python 3.13 or later, a local `.venv`, `pyproject.toml`, no runtime dependency beyond the standard library.
 5. **O5** Document it: README from the project template, Doxygen source documentation, and a wiki in English, Danish and Bahasa Malaysia, with screenshots.
 6. **O6** Present the repository clearly on the git host: description and topics.
+7. **O7** Bring the finished project to the common baseline of the framework: the adopted framework release, the wiki in the framework's shape, complete licence metadata and review records for every changed document ([MIL-006]).
 
 ## Scope
 
@@ -51,6 +53,7 @@ A complete, tested and documented solution gives the Product Owner a reference r
 - `pyproject.toml`, `constants.py`, Python `.gitignore`, `Doxyfile`, continuous integration workflow.
 - README, wiki (English, Danish, Bahasa Malaysia) and screenshots.
 - Repository description and topics on the git host.
+- The baseline milestone [MIL-006]: framework release, wiki language lines and sidebar in the framework's shape, README in the framework template, licence metadata, review records and the updated traceability matrix. It changes no behaviour of the program.
 - Planning documents under `docs/` and one pull request per milestone.
 
 ### Out of Scope
@@ -59,6 +62,7 @@ A complete, tested and documented solution gives the Product Owner a reference r
 - Packaging for PyPI, executable bundles, or a web or mobile version.
 - Runtime dependencies other than the Python standard library.
 - Languages other than English, Danish and Bahasa Malaysia for the wiki.
+- Any change to `src/` or `tests/` in the baseline milestone [MIL-006].
 
 ## Expected Benefits
 
@@ -88,6 +92,7 @@ The project supports the Product Owner's learning goal in the 100 Days of Code c
 | 5 | Runtime dependencies | 0 packages other than the standard library | `pyproject.toml` has an empty `dependencies` list |
 | 6 | Documentation | README sections of the project template, Doxygen build with 0 warnings, 3 wiki languages each with a screenshot | `doxygen` output; wiki page list |
 | 7 | Repository presentation | A description and at least 5 topics set on the git host | Repository page |
+| 8 | The baseline milestone is done (O7) | Wiki pages in 3 languages in `docs/wiki/`, `framework/scripts/check-readme.sh` exits with code 0, 100 % of the continuous integration (CI) checks of the pull request of [MIL-006] pass | Files in `docs/wiki/`, the script exit code and the pull request status on the git host |
 
 ## Risks
 
@@ -98,13 +103,15 @@ The project supports the Product Owner's learning goal in the 100 Days of Code c
 | The framework's review rules need a person for the language criteria, which an autonomous run cannot supply | A document stays on Go-with-conditions | The verdict is recorded as such and listed in the run summary for S01 to confirm |
 | Secrets in `.env` leak into the repository | Credential exposure | `.env` is ignored by git, never imported by the project and never printed |
 | The wiki repository is not enabled on the git host | Wiki pages cannot be published | Keep the pages as files in the repository and report the blocker |
+| The documents of the baseline milestone [MIL-006] are reviewed by an AI stand-in for S01 | A defect is missed because the review is not independent | Every review record of the baseline says `Mode: autonomous, not independent`, and the end-of-run summary lists it for challenge |
 
 ## Assumptions
 
-- The Product Owner's language is English and the domain is IT (confirmed by S01 in chat on 2026-10-13).
+- The Product Owner's language is English. The domain was IT when S01 confirmed it in chat on 2026-10-13; since [MIL-006] it is education, a course exercise project (S01's instruction for the baseline of the course projects).
 - The git host is Gitea at `git.tirsystem.com`, the repository exists and a personal access token is available in a local `.env` file used only for personal tooling.
 - "Python greater than 3.13" is read as Python 3.13 or later (`requires-python = ">=3.13"`).
 - Tkinter ships with the Python installation of the target platforms.
+- The baseline milestone [MIL-006] is finished within one week of its own start, 2026-11-16, by 2026-11-23. For that milestone only, an AI stand-in for S01 reviews and accepts the changed documents.
 
 ## Constraints
 
@@ -114,6 +121,7 @@ The project supports the Product Owner's learning goal in the 100 Days of Code c
 - Avoid runtime dependencies unless needed.
 - Work on branches and pull requests, one per milestone; nothing under `src/` or `tests/` before its milestone is accepted with a Go review.
 - Duration: finished within one week, by 2026-10-20.
+- The baseline milestone [MIL-006] is the exception to the rule of one reviewer: S01 has authorised the assistant to commit, push, open the pull request and merge it in autonomous mode.
 
 ## Cost–Benefit Assessment
 
@@ -141,3 +149,6 @@ Proceed — the scope is small, the cost is low and every objective is verifiabl
 
 [SA-001]: ./stakeholder-analysis.md
 [75fa7ed]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/75fa7ed494597311f4cf762cf2e83ac36e22d153
+[PP-001]: ./project-plan.md
+[MIL-006]: ./milestones/mil-006-framework-baseline.md
+[3da20f5]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/3da20f512ebb3297bac84d8e9146b55bd1a30098

@@ -6,28 +6,29 @@
 | ID | DICT-001 |
 | CrossReference | [BC-001], [SA-001] |
 | Language | en |
-| Domain | it |
+| Domain | education |
 
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-10-13 | Accepted | AI for S01 | AI as stand-in for S01 | Initial version; Go in RC-003 | [75fa7ed] |
+| 2026-10-13 | Deprecated | AI for S01 | AI as stand-in for S01 | Initial version; Go in RC-003 | [75fa7ed] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Set the domain to education and put the rows in ascending order of the PO term (criterion 8 of QC-DICT-001); the terms and definitions are unchanged; reviewed in autonomous mode, not independent | [3da20f5] |
 
 ---
 
 ## Purpose and Scope
 
-Maps each Product Owner (PO) term of the Pomodoro timer to its professional IT term. PO language: en. Domain: it. The dictionary covers the words of the Pomodoro technique as the Business Case and the milestones use them, and the names the source code gives them.
+Maps each Product Owner (PO) term of the Pomodoro timer to its professional IT term. PO language: en. Domain: education. The dictionary covers the words of the Pomodoro technique as the Business Case and the milestones use them, and the names the source code gives them.
 
 ## Dictionary
 
 | PO term | Language | IT term | Definition | Used as PO term in | Used as IT term in |
 | --- | --- | --- | --- | --- | --- |
-| work session | en | work repetition | A period of focused work, 25 minutes by default. | BC, SA, PP, MIL | PY |
 | break | en | break repetition | A period of rest between work sessions, short (5 minutes) or long (20 minutes). | BC, SA, PP, MIL | PY |
 | check mark | en | check-mark label text | The symbol shown for each completed work session. | BC, SA, PP, MIL | PY |
 | countdown | en | count_down | The display of the remaining time in `M:SS` that ticks once per second. | BC, SA, PP, MIL | PY |
 | reset | en | reset_timer | The action that stops the timer and returns the application to its start state. | BC, SA, PP, MIL | PY |
+| work session | en | work repetition | A period of focused work, 25 minutes by default. | BC, SA, PP, MIL | PY |
 
 ## Rules
 
@@ -41,3 +42,4 @@ Maps each Product Owner (PO) term of the Pomodoro timer to its professional IT t
 [SA-001]: ./stakeholder-analysis.md
 [PP-001]: ./project-plan.md
 [75fa7ed]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/75fa7ed494597311f4cf762cf2e83ac36e22d153
+[3da20f5]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/028-pomodoro/commit/3da20f512ebb3297bac84d8e9146b55bd1a30098
